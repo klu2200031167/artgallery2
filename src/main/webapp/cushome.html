@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #6A0DAD;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .profile {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .painting-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .painting {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s; /* Add transition for hover effect */
+        }
+
+        .painting img {
+            width: 100%;
+            height: auto;
+        }
+
+        .painting h3 {
+            margin: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .painting:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the Art Gallery</h1>
+</header>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="cuspainting.html">Paintings</a>
+    <a href="cusprofile.html">Profile</a>
+</div>
+
+<!-- Painting List -->
+<div class="painting-list">
+    <div class="painting">
+        <img src="oil.jpeg" alt="Painting 1"> <!-- Replace with actual image path -->
+        <h3>Oil Painting</h3>
+    </div>
+    <div class="painting">
+        <img src="pot.jpeg" alt="Painting 2"> <!-- Replace with actual image path -->
+        <h3>Pot</h3>
+    </div>
+    <div class="painting">
+        <img src="animal2.jpeg" alt="Painting 3"> <!-- Replace with actual image path -->
+        <h3>Asethetic</h3>
+    </div>
+    <div class="painting">
+        <img src="water2.jpeg" alt="Painting 4"> <!-- Replace with actual image path -->
+        <h3>Culture</h3>
+    </div>
+    <div class="painting">
+        <img src="art2.jpeg" alt="Painting 4"> <!-- Replace with actual image path -->
+        <h3>Culture</h3>
+    </div>
+    <div class="painting">
+        <img src="art3.jpeg" alt="Painting 4"> <!-- Replace with actual image path -->
+        <h3>Culture</h3>
+    </div>
+    <div class="painting">
+        <img src="art4.jpeg" alt="Painting 4"> <!-- Replace with actual image path -->
+        <h3>Culture</h3>
+    </div>
+    <div class="painting">
+        <img src="art5.jpeg" alt="Painting 4"> <!-- Replace with actual image path -->
+        <h3>Culture</h3>
+    </div>
+    <div class="painting">
+        <img src="art5.jpeg" alt="Painting 4"> <!-- Replace with actual image path -->
+        <h3>Culture</h3>
+    </div>
+    <div class="painting">
+        <img src="sun2.jpeg" alt="Painting 4"> <!-- Replace with actual image path -->
+        <h3>Culture</h3>
+    </div>
+    <div class="painting">
+        <img src="sun.jpeg" alt="Painting 4"> <!-- Replace with actual image path -->
+        <h3>Culture</h3>
+    </div>
+    <div class="painting">
+        <img src="moon1.jpeg" alt="Painting 4"> <!-- Replace with actual image path -->
+        <h3>Culture</h3>
+    </div>
+    <div class="painting">
+        <img src="art1.jpeg" alt="Painting 4"> <!-- Replace with actual image path -->
+        <h3>Culture</h3>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Dashboard | Manage Art Listings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #22a6b3;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Dashboard Section */
+        .dashboard {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .dashboard h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .grid-item h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .grid-item p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .grid-item a {
+            display: inline-block;
+            background-color: #22a6b3;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .grid-item a:hover {
+            background-color: #1f8b96;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="uploadartwork.html">Upload Artwork</a>
+        <a href="managelistings.html">Manage Listings</a>
+        <a href="viewmessages.html">Sales Report</a>
+        <a href="tracksales.html">Track Sales</a>
+        <a href="#">Profile</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome, Artist!</h1>
+        <p>Upload and manage your artwork, interact with buyers, and track your sales effortlessly.</p>
+        <button onclick="window.location.href='#dashboard'">Go to Dashboard</button>
+    </div>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard" id="dashboard">
+        <h2>Your Dashboard</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Upload Artwork</h3>
+                <p>Easily upload new pieces of art to showcase to potential buyers.</p>
+                <a href="uploadartwork.html">Upload Now</a>
+            </div>
+            <div class="grid-item">
+                <h3>Manage Listings</h3>
+                <p>Edit, remove, or update your current artwork listings.</p>
+                <a href="managelistings.html">Manage Listings</a>
+            </div>
+            <div class="grid-item">
+                <h3>Interact with Buyers</h3>
+                <p>Check buyer inquiries and respond to messages quickly.</p>
+                <a href="viewmessages.html">View Messages</a>
+            </div>
+            <div class="grid-item">
+                <h3>Interact with Buyers</h3>
+                <p>Check buyer inquiries and respond to messages quickly.</p>
+                <a href="tracksales.html">Track Sales</a>
+            </div>
+            <div class="grid-item">
+                <h3>Track Sales</h3>
+                <p>View your recent sales, earnings, and track performance.</p>
+                <a href="#">View Sales Report</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Artist Dashboard. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

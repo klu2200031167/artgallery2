@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork Insights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2 {
+            color: #6a1b9a;
+            text-align: center;
+        }
+        .artwork-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between cards */
+        }
+        .artwork-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 220px; /* Set a fixed width for cards */
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s; /* Smooth scaling on hover */
+        }
+        .artwork-card:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+        .artwork-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: #6a1b9a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Artwork Insights</h1>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Explore Detailed Insights</h2>
+
+        <div class="artwork-container">
+
+            <div class="artwork-card">
+                <img src="starynight.jpeg" alt="Artwork 1">
+                <h3>Starry Night</h3>
+                <p>Artist: Vincent van Gogh</p>
+                <p>A swirling night sky over a quiet village.</p>
+            </div>
+
+            <div class="artwork-card">
+                <img src="pot.jpeg" alt="Artwork 2">
+                <h3>The Persistence of Memory</h3>
+                <p>Artist: Salvador Dalí</p>
+                <p>Melting clocks in a surreal landscape.</p>
+            </div>
+
+            <div class="artwork-card">
+                <img src="moon.jpeg" alt="Artwork 3">
+                <h3>Mona Lisa</h3>
+                <p>Artist: Leonardo da Vinci</p>
+                <p>The enigmatic smile of a timeless beauty.</p>
+            </div>
+
+            <div class="artwork-card">
+                <img src="moon1.jpeg" alt="Artwork 4">
+                <h3>The Scream</h3>
+                <p>Artist: Edvard Munch</p>
+                <p>A vivid representation of existential dread.</p>
+            </div>
+
+            <div class="artwork-card">
+                <img src="sun.jpeg" alt="Artwork 5">
+                <h3>Girl with a Pearl Earring</h3>
+                <p>Artist: Johannes Vermeer</p>
+                <p>The captivating gaze of a young girl.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Contact: curator@example.com | Phone: 123-456-7890</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Art Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        /* Container for categories and paintings */
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        /* Sidebar for categories */
+        .sidebar {
+            width: 20%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .sidebar ul li:hover,
+        .sidebar ul li.active {
+            background-color: #6a1b9a;
+            color: white;
+        }
+
+        /* Main content area for paintings */
+        .main-content {
+            width: 80%;
+            margin-left: 20px;
+        }
+
+        .main-content h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Grid layout for paintings */
+        .grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .grid-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            width: 23%;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .grid-item h4 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .grid-item p {
+            margin-bottom: 10px;
+            color: #777;
+        }
+
+        .grid-item .price {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .grid-item button {
+            background-color: #e53935;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .grid-item button:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function filterPaintings(category) {
+            const allItems = document.querySelectorAll('.grid-item');
+            allItems.forEach(item => {
+                if (category === 'All' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function addToCart(event) {
+            event.preventDefault(); // Prevent form submission
+            // Redirect to login page
+            window.location.href = "userlogin.html"; // Redirect to login page
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <a href="cart.html">cart</a>
+    </div>
+
+    <!-- Main container -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li class="active" onclick="filterPaintings('All')">All</li>
+                <li onclick="filterPaintings('Acrylic Painting')">Acrylic Painting</li>
+                <li onclick="filterPaintings('Animal')">Animal</li>
+                <li onclick="filterPaintings('God')">God</li>
+                <li onclick="filterPaintings('Oil Painting')">Oil Painting</li>
+                <li onclick="filterPaintings('Watercolor Painting')">Watercolor Painting</li>
+            </ul>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <h3>Paintings</h3>
+            <div class="grid">
+                <!-- Painting 1 -->
+                <div class="grid-item" data-category="God">
+                    <img src="lord rishna.jpeg" alt="Lord Shiv Painting">
+                    <h4>Lord Krishna Painting</h4>
+                    <p>Category: God</p>
+                    <p class="price">₹ 450</p>
+                    <button onclick="addToCart(event)">Add To Cart</button>
+                </div>
+
+                <!-- Painting 2 -->
+                <div class="grid-item" data-category="Bird">
+                    <img src="bluebird.jpeg" alt="Blue Bird Painting">
+                    <h4>Blue Bird Painting</h4>
+                    <p>Category: Bird</p>
+                    <p class="price">₹ 600</p>
+                    <button onclick="addToCart(event)">Add To Cart</button>
+                </div>
+
+                <!-- Painting 3 -->
+                <div class="grid-item" data-category="Oil Painting">
+                    <img src="oil.jpeg" alt="Mountain Oil Painting">
+                    <h4>Mountain Oil Painting</h4>
+                    <p>Category: Oil Painting</p>
+                    <p class="price">₹ 450</p>
+                    <button onclick="addToCart(event)">Add To Cart</button>
+                </div>
+
+                <!-- Painting 4 -->
+                <div class="grid-item" data-category="Animal">
+                    <img src="deer.jpeg" alt="Deer Painting">
+                    <h4>Deer Painting</h4>
+                    <p>Category: Animal</p>
+                    <p class="price">₹ 399</p>
+                    <button onclick="addToCart(event)">Add To Cart</button>
+                </div>
+
+                <!-- Painting 5 -->
+                <div class="grid-item" data-category="Acrylic Painting">
+                    <img src="aestetic1.jpeg" alt="Acrylic Painting">
+                    <h4>Acrylic Painting Example</h4>
+                    <p>Category: Acrylic Painting</p>
+                    <p class="price">₹ 499</p>
+                    <button onclick="addToCart(event)">Add To Cart</button>
+                </div>
+
+                <!-- Painting 6 -->
+                <div class="grid-item" data-category="Watercolor Painting">
+                    <img src="water2.jpeg" alt="Watercolor Painting">
+                    <h4>Watercolor Painting Example</h4>
+                    <p>Category: Watercolor Painting</p>
+                    <p class="price">₹ 300</p>
+                    <button onclick="addToCart(event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for login (removed as per request) -->
+    
+</body>
+</html>

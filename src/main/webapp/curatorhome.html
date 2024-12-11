@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curator Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
+
+        header button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        header button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Main Section */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .main-container .card {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .main-container .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .card a:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Organize Exhibitions</a>
+        <a href="#">Provide Insights</a>
+        <a href="#">Manage Gallery Content</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Curator Dashboard</h1>
+        <p>Manage exhibitions, provide artwork insights, and organize gallery content.</p>
+        <button onclick="window.location.href='#exhibitions'">Get Started</button>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main-container" id="exhibitions">
+        <!-- Card 1: Organize Exhibitions -->
+        <div class="card">
+            <img src="https://img.icons8.com/clouds/100/000000/curator.png" alt="Exhibitions">
+            <h3>Organize Exhibitions</h3>
+            <p>Set up upcoming exhibitions and manage gallery events effortlessly.</p>
+            <a href="organize_exhibitions.html">Manage Exhibitions</a>
+        </div>
+
+        <!-- Card 2: Provide Insights -->
+        <div class="card">
+            <img src="https://img.icons8.com/clouds/100/000000/feedback.png" alt="Insights">
+            <h3>Provide Insights</h3>
+            <p>Offer detailed analysis and insights about featured artworks.</p>
+            <a href="insights.html">View Insights</a>
+        </div>
+
+        <!-- Card 3: Manage Gallery Content -->
+        <div class="card">
+            <img src="https://img.icons8.com/clouds/100/000000/pictures-folder.png" alt="Manage Content">
+            <h3>Manage Gallery Content</h3>
+            <p>Update gallery artwork listings, images, and details regularly.</p>
+            <a href="manage_gallery.html">Update Content</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Curator Dashboard. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
